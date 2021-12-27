@@ -45,9 +45,10 @@ public class Main {
                 case 6:
                     System.out.println("Enter A to begin the stopWatch : ");
                     char firstClick = scanner.next().charAt(0);
+                    long startTime = object.startStopWatch(firstClick);
                     System.out.println("Enter Z to stop stopwatch: ");
                     char endClick = scanner.next().charAt(0);
-                    object.stopWatch(firstClick,endClick);
+                    object.endStopWatch(startTime,endClick);
                     break;
                 case 7:
                     System.exit(0);
