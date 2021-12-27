@@ -8,10 +8,11 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         while(true) {
             System.out.println("Enter which program do you want to run :: ");
-            System.out.println("1.fibonacci \t" +
-                    "2.perfect number \t" +
-                    " 3.prime number" +
-                    "4.exit");
+            System.out.println("1.fibonacci \n" +
+                    "2.perfect number \n" +
+                    " 3.prime number \n" +
+                    "4.reverse number \n" +
+                    "5.exit");
             int userChoice = scanner.nextInt();
             switch (userChoice) {
                 case 1:
@@ -30,6 +31,11 @@ public class Main {
                     object.primeNumber(number1);
                     break;
                 case 4:
+                    System.out.println("Enter a number to reverse ");
+                    int number2 = scanner.nextInt();
+                    object.reverseNumber(number2);
+                    break;
+                case 5:
                     System.exit(0);
                 default:
                     System.out.println("Choose correct option !");
