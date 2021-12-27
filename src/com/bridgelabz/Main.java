@@ -12,7 +12,8 @@ public class Main {
                     "2.perfect number \n" +
                     " 3.prime number \n" +
                     "4.reverse number \n" +
-                    "5.exit");
+                    "5.coupon numbers" +
+                    " 6.exit");
             int userChoice = scanner.nextInt();
             switch (userChoice) {
                 case 1:
@@ -36,6 +37,11 @@ public class Main {
                     object.reverseNumber(number2);
                     break;
                 case 5:
+                    System.out.println("Enter how many distinct coupons needed?");
+                    int numOfCoupons = scanner.nextInt();
+                    object.distinctCoupons(numOfCoupons);
+                    break;
+                case 6:
                     System.exit(0);
                 default:
                     System.out.println("Choose correct option !");

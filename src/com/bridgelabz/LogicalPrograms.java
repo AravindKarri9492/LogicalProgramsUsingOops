@@ -55,4 +55,29 @@ public class LogicalPrograms {
         }
         System.out.println("Reverse of the given number is "+reverse);
     }
+    //Distinct coupons
+    public static void distinctCoupons(int numOfCoupons)
+    {
+        int numOfRandomNumbers =0;
+        int coupons[] = new int[numOfCoupons];
+        int count=0;
+        while(numOfCoupons > count) {
+            boolean flag =true;
+            int randomNum = (int)Math.floor(Math.random()*100);
+            numOfRandomNumbers++;
+            for(int index=0;index<coupons.length;index++) {
+                if(coupons[index]==randomNum) {
+                    flag=false;
+                }
+            }
+            if(flag == true) {
+                coupons[count++] = randomNum;
+            }
+        }
+        //Print the distinct coupons
+        for (int index =0 ; index< coupons.length ;index++) {
+            System.out.println("Distinct coupons are: "+coupons[index]);
+        }
+        System.out.println("Number of attempts: "+numOfRandomNumbers);
+    }
 }
