@@ -8,12 +8,13 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         while(true) {
             System.out.println("Enter which program do you want to run :: ");
-            System.out.println("1.fibonacci \n" +
-                    "2.perfect number \n" +
-                    " 3.prime number \n" +
-                    "4.reverse number \n" +
-                    "5.coupon numbers" +
-                    " 6.exit");
+            System.out.println( "1.fibonacci \n" +
+                                "2.perfect number \n" +
+                                "3.prime number \n" +
+                                "4.reverse number \n" +
+                                "5.coupon numbers \n" +
+                                "6.stop watch \n" +
+                                "7.exit");
             int userChoice = scanner.nextInt();
             switch (userChoice) {
                 case 1:
@@ -42,6 +43,13 @@ public class Main {
                     object.distinctCoupons(numOfCoupons);
                     break;
                 case 6:
+                    System.out.println("Enter A to begin the stopWatch : ");
+                    char firstClick = scanner.next().charAt(0);
+                    System.out.println("Enter Z to stop stopwatch: ");
+                    char endClick = scanner.next().charAt(0);
+                    object.stopWatch(firstClick,endClick);
+                    break;
+                case 7:
                     System.exit(0);
                 default:
                     System.out.println("Choose correct option !");
