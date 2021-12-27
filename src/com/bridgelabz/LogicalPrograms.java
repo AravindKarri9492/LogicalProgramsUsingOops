@@ -81,20 +81,17 @@ public class LogicalPrograms {
         System.out.println("Number of attempts: "+numOfRandomNumbers);
     }
     //Stopwatch
-    public long startStopWatch(char firstClick)
-    {
+    public long startStopWatch(char firstClick) {
         long startTime = 0;
-        if(firstClick == 'A')
-        {
+        if(firstClick == 'A') {
             startTime = System.currentTimeMillis(); //print the current time in milliseconds
             System.out.println(startTime);
         }
         return  startTime;
     }
-    public void endStopWatch(long startTime,char endClick)
-    {
-        if(endClick == 'Z')
-        {
+
+    public void endStopWatch(long startTime,char endClick) {
+        if(endClick == 'Z') {
             long elapsedTime = System.currentTimeMillis() - startTime;
             System.out.println("Elapsed time in milliseconds :"+elapsedTime);
         }
