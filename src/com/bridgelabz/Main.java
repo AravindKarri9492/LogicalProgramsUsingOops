@@ -14,7 +14,8 @@ public class Main {
                                 "4.reverse number \n" +
                                 "5.coupon numbers \n" +
                                 "6.stop watch \n" +
-                                "7.exit");
+                                "7.temperature conversion \n" +
+                                "8.exit");
             int userChoice = scanner.nextInt();
             switch (userChoice) {
                 case 1:
@@ -51,6 +52,9 @@ public class Main {
                     object.endStopWatch(startTime,endClick);
                     break;
                 case 7:
+                    object.temperatureConversion();
+                    break;
+                case 8:
                     System.exit(0);
                 default:
                     System.out.println("Choose correct option !");

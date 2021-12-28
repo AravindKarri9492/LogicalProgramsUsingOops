@@ -1,6 +1,7 @@
 package com.bridgelabz;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class LogicalPrograms {
     //Fibonacci
@@ -94,9 +95,36 @@ public class LogicalPrograms {
     }
 
     public void endStopWatch(long startTime,char endClick) {
-        if(endClick == 'Z') {
+        if (endClick == 'Z') {
             long elapsedTime = System.currentTimeMillis() - startTime;
-            System.out.println("Elapsed time in milliseconds :"+elapsedTime);
+            System.out.println("Elapsed time in milliseconds :" + elapsedTime);
+        }
+    }
+    //Temperature conversion
+    public void temperatureConversion() {
+        double fahrenheit,celsius;
+        System.out.println( "1) fahrenheit to Celsius \t"+
+                            "2) Celsius to  fahrenheit \t" +
+                            "3) Exit");
+        Scanner scanner = new Scanner(System.in);
+        int userChoice=scanner.nextInt();
+        switch (userChoice) {
+            case 1:
+                System.out.println("Enter Fahrenheit :: ");
+                fahrenheit = scanner.nextDouble();
+                celsius = (fahrenheit-32) * 5/9;
+                System.out.println("conversion of given temperature is :: "+celsius);
+                break;
+            case 2:
+                System.out.println("Enter Celsius :: ");
+                celsius = scanner.nextDouble();
+                fahrenheit = (celsius* 9/5)+ 32;
+                System.out.println("conversion of given temperature is :: "+fahrenheit);
+                break;
+            case 3:
+                System.exit(0);
+            default:
+                System.out.println("You entered a wrong input");
         }
     }
 }
