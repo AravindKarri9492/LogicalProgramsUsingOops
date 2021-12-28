@@ -59,7 +59,7 @@ public class LogicalPrograms {
         System.out.println("Reverse of the given number is "+reverse);
     }
     //Distinct coupons
-    public static void distinctCoupons(int numOfCoupons)
+    public void distinctCoupons(int numOfCoupons)
     {
         int numOfRandomNumbers =0;
         int coupons[] = new int[numOfCoupons];
@@ -126,5 +126,12 @@ public class LogicalPrograms {
             default:
                 System.out.println("You entered a wrong input");
         }
+    }
+    //Monthly Payment
+    public int calculateMonthlyPayment(double rate,double year,double principleAmount){
+        double r = rate / (12 * 100);
+        double n = - 1* 12 * year;
+        double payment = (principleAmount * r) / (1 - Math.pow((1 + r) , n));
+        return (int)payment;
     }
 }

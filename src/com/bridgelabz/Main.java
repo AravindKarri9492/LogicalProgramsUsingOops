@@ -15,7 +15,8 @@ public class Main {
                                 "5.coupon numbers \n" +
                                 "6.stop watch \n" +
                                 "7.temperature conversion \n" +
-                                "8.exit");
+                                "8.monthly payment \n" +
+                                "9.exit");
             int userChoice = scanner.nextInt();
             switch (userChoice) {
                 case 1:
@@ -55,6 +56,16 @@ public class Main {
                     object.temperatureConversion();
                     break;
                 case 8:
+                    System.out.println("Enter How many years to pay off :: ");
+                    double year = scanner.nextDouble();
+                    System.out.println("Enter the principal loan amount :: ");
+                    double principleAmount = scanner.nextDouble();
+                    System.out.println("Rate percentage ::");
+                    double rate = scanner.nextDouble();
+                    double payment = object.calculateMonthlyPayment(rate,year,principleAmount);
+                    System.out.println("Monthly payment is "+payment);
+                    break;
+                case 9:
                     System.exit(0);
                 default:
                     System.out.println("Choose correct option !");
