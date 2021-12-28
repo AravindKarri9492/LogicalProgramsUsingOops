@@ -134,4 +134,13 @@ public class LogicalPrograms {
         double payment = (principleAmount * r) / (1 - Math.pow((1 + r) , n));
         return (int)payment;
     }
+    //Newton's square root
+    public void squareRoot(int number){
+        double epsilon = 1e-15;
+        double root = number;
+        while(Math.abs(root-number/root) > epsilon * root) {
+            root = (number/root+root)/2;
+        }
+        System.out.println("The square root of the number is " +root);
+    }
 }

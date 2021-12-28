@@ -16,7 +16,8 @@ public class Main {
                                 "6.stop watch \n" +
                                 "7.temperature conversion \n" +
                                 "8.monthly payment \n" +
-                                "9.exit");
+                                "9.square root \n" +
+                                "10.exit");
             int userChoice = scanner.nextInt();
             switch (userChoice) {
                 case 1:
@@ -66,6 +67,11 @@ public class Main {
                     System.out.println("Monthly payment is "+payment);
                     break;
                 case 9:
+                    System.out.println("Enter a non negative number ::");
+                    int num1 = scanner.nextInt();
+                    object.squareRoot(num1);
+                    break;
+                case 10:
                     System.exit(0);
                 default:
                     System.out.println("Choose correct option !");
