@@ -1,5 +1,7 @@
 package com.bridgelabz;
 
+import java.util.Random;
+
 public class LogicalPrograms {
     //Fibonacci
     public void fibonacci(int number){
@@ -63,7 +65,8 @@ public class LogicalPrograms {
         int count=0;
         while(numOfCoupons > count) {
             boolean flag =true;
-            int randomNum = (int)Math.floor(Math.random()*100);
+            Random rand = new Random();
+            int randomNum = Math.abs(rand.nextInt());
             numOfRandomNumbers++;
             for(int index=0;index<coupons.length;index++) {
                 if(coupons[index]==randomNum) {

@@ -10,10 +10,10 @@ public class Main {
             System.out.println("Enter which program do you want to run :: ");
             System.out.println("1.fibonacci \n" +
                     "2.perfect number \n" +
-                    " 3.prime number \n" +
+                    "3.prime number \n" +
                     "4.reverse number \n" +
-                    "5.coupon numbers" +
-                    " 6.exit");
+                    "5.coupon numbers \n" +
+                    "6.exit");
             int userChoice = scanner.nextInt();
             switch (userChoice) {
                 case 1:
